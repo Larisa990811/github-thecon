@@ -6,6 +6,14 @@
     border-radius: 4px;
   }
   
-  .cancelButton{
+.cancelButton{
      float: right;
-  }
+}
+
+input.ng-invalid.ng-touched {
+   border: 1px solid red;
+}
+
+span{
+   color: red;
+}
