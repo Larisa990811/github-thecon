@@ -1,0 +1,25 @@
+.container {
+  margin-top: 30px;
+}
+
+.row {
+  margin: 20px 0;
+}
+
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal-backdrop.fade{
+  opacity: 0.5;
+}
+
+.modal-open .modal{
+  opacity: 1;
+}

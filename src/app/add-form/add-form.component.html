@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm)">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input
+              type="number"
+              class="form-control"
+              id="id"
+              required
+              ngModel
+              name="id"
+              #id="ngModel"
+            />
+            <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a valid id!</span>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              required
+              ngModel
+              name="name"
+              #name="ngModel"
+            />
+            <span class="help-block" *ngIf="!name.valid && name.touched">Please enter a valid name!</span>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select 
+            [ngModel]="selectedValue"
+            name="status" 
+            id="status" 
+            class="select"
+            #status>
+            <option value="available">Available</option>
+            <option value="pending">Pending</option>
+            <option value="sold">Sold</option>
+            </select>
+          </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!postForm.valid"
+          >
+            Send Post
+          </button>
+          <button class="btn cancelButton" (click)="onCancel()">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>

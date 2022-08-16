@@ -1,0 +1,34 @@
+<div class="parent">
+    <div class="petDescription">
+        <p>Pet Details</p>
+    </div>
+<div class="child">
+    <form #contentDetails>
+        <div class="form-group">
+           <label for="detailsIndex">Index</label>
+            <div class="input-group">
+               <input id="detailsIndex" class="form-control" value={{petInfo.id}} readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="detailsName">Name</label>
+            <div class="input-group">
+                <input id="detailsName" class="form-control" value={{petInfo.name}} readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="detailsStatus">Status</label>
+            <div class="input-group">
+                <input id="detailsStatus" class="form-control" value={{petInfo.status}} readonly>
+            </div>
+        </div>
+    </form>
+    <br>
+<button class="btn btn-primary" (click)="getBack()">
+    <fa-icon [icon]="backIcon"></fa-icon>
+    RETURN BACK
+</button> 
+</div>
+</div>
+
+
